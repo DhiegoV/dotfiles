@@ -29,8 +29,11 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec mate-terminal
+set $defaultTerminal mate-terminal
+set $runInDefaultTerminal mate-terminal -e
+
+# start the default terminal
+bindsym $mod+Return exec $defaultTerminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -179,6 +182,18 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+mode "open window" {
+    bindsym r exec $runInDefaultTerminal ranger 
+    bindsym s exec spotify
+    bindsym i exec firefox
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+z mode "open window"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
