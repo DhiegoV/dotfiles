@@ -145,8 +145,7 @@ bindsym $mod+F11 exec --no-startup-id light -U 20
 bindsym $mod+F10 exec --no-startup-id ~/.config/i3/dependencies/toggletouchpad
 
 # Media player controls
-bindsym $mod+F5 exec playerctl play
-bindsym $mod+F7 exec playerctl pause
+bindsym $mod+F5 exec playerctl play-pause
 bindsym $mod+F4 exec playerctl previous
 bindsym $mod+F6 exec playerctl next
 
