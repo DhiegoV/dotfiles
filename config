@@ -78,6 +78,14 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# borders
+hide_edge_borders smart
+#for new windows
+new_window pixel 1
+#showing/hiding the title
+bindsym $mod+t border normal
+bindsym $mod+Shift+t border pixel 1
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
