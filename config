@@ -95,7 +95,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -150,7 +150,7 @@ bindsym $mod+F12 exec --no-startup-id light -A 20
 bindsym $mod+F11 exec --no-startup-id light -U 20
 
 # Touchpad controls
-bindsym $mod+F10 exec --no-startup-id ~/.config/i3/dependencies/toggletouchpad
+bindsym $mod+space exec --no-startup-id ~/.config/i3/dependencies/toggletouchpad
 
 # Media player controls
 bindsym $mod+F5 exec playerctl play-pause
