@@ -81,10 +81,10 @@ bindsym $mod+f fullscreen toggle
 # borders
 hide_edge_borders smart
 #for new windows
-new_window pixel 1
+new_window pixel 3
 #showing/hiding the title
 bindsym $mod+t border normal
-bindsym $mod+Shift+t border pixel 1
+bindsym $mod+Shift+t border pixel 3
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
