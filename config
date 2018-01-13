@@ -154,6 +154,9 @@ bindsym $mod+F11 exec --no-startup-id light -U 20
 # Touchpad controls
 bindsym $mod+space exec --no-startup-id ~/.config/i3/dependencies/toggletouchpad
 
+# Wifi control
+bindsym $mod+Insert exec --no-startup-id ~/.config/i3/dependencies/togglewifi
+
 # Media player controls
 bindsym $mod+F5 exec playerctl play-pause
 bindsym $mod+F4 exec playerctl previous

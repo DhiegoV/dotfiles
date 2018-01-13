@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $(nmcli radio wifi) = habilitado ]
+then
+nmcli radio wifi off
+notify-send --expire-time=100 'Wifi disabled'
+else
+nmcli radio wifi on
+notify-send --expire-time=100 'Wifi enabled'
+fi
+
