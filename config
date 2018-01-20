@@ -163,8 +163,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # running programs on startup
-#swapping caps lock with esc
+# swapping caps lock with esc
 exec --no-startup-id setxkbmap -option "caps:swapescape"
+# setting the wallpaper
+exec --no-startup-id feh --image-bg black --bg-max '/home/dh/Imagens/metro.tunnel.jpg'
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
