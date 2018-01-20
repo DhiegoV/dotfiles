@@ -78,19 +78,6 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# borders
-hide_edge_borders smart
-#for new windows
-new_window pixel 3
-#showing/hiding the title
-bindsym $mod+t border normal
-bindsym $mod+Shift+t border pixel 3
-
-# colors
-# class          border  backgr. text    indicator child_border
-client.focused   #fc0266 #fc0266 #0c010c #6702db   #fc0266
-client.unfocused #262626 #262626 #eeeeee #262626   #262626
-
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -216,6 +203,19 @@ mode "open window" {
 }
 
 bindsym $mod+x mode "open window"
+
+# borders
+hide_edge_borders smart
+#for new windows
+new_window pixel 3
+#showing/hiding the title
+bindsym $mod+t border normal
+bindsym $mod+Shift+t border pixel 3
+
+# colors
+# class          border  backgr. text    indicator child_border
+client.focused   #fc0266 #fc0266 #0c010c #6702db   #fc0266
+client.unfocused #262626 #262626 #eeeeee #262626   #262626
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
