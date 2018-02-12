@@ -44,7 +44,7 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -p ""'
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -i -p ""'
 
 # change focus
 bindsym $mod+h focus left
@@ -207,8 +207,26 @@ mode "open window" {
 
 bindsym $mod+x mode "open window"
 
+set $innergap 8
+set $outergap 16
 # gaps
-gaps inner 8
+gaps inner $innergap
+gaps outer $outergap
+# no border when there are no gaps
+smart_borders no_gaps
+## controls
+# reseting
+bindsym $mod+Control+minus gaps inner current set 0 , gaps outer current set 0
+bindsym $mod+Control+equal gaps inner current set $innergap , gaps outer current set $outergap
+# inner gaps
+bindsym $mod+equal gaps inner current plus $innergap
+bindsym $mod+minus gaps inner current minus $innergap
+# outer gaps
+bindsym $mod+Shift+equal gaps outer current plus $outergap
+bindsym $mod+Shift+minus gaps outer current minus $outergap
+## workspace gaps
+workspace $workspace9 gaps outer 0
+workspace $workspace9 gaps inner 0
 
 # borders
 #for new windows
