@@ -29,8 +29,8 @@ font pango:inconsolata 11
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-set $defaultTerminal mate-terminal
-set $runInDefaultTerminal mate-terminal -e
+set $defaultTerminal urxvt
+set $runInDefaultTerminal urxvt -e
 
 # start the default terminal
 bindsym $mod+Return exec $defaultTerminal
