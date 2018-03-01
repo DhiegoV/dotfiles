@@ -209,7 +209,7 @@ mode "open window" {
 bindsym $mod+x mode "open window"
 
 set $innergap 8
-set $outergap 16
+set $outergap 32
 # gaps
 gaps inner $innergap
 gaps outer $outergap
