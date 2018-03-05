@@ -129,10 +129,13 @@ assign [class="Firefox"] $workspace8
 assign [class="qutebrowser"] $workspace10
 for_window [class="Spotify"] move to workspace $workspace9
 
+# defining here to use in relative paths
+set $. ~/.config/i3
+
 # Pulse Audio controls
 # move the open programs' audio to the defined sink
-bindsym $mod+Shift+s exec --no-startup-id ~/.config/i3/scripts/movesinks 0
-bindsym $mod+Shift+f exec --no-startup-id ~/.config/i3/scripts/movesinks 1
+bindsym $mod+Shift+s exec --no-startup-id $./scripts/movesinks 0
+bindsym $mod+Shift+f exec --no-startup-id $./scripts/movesinks 1
 # increase volume
 bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% 
 # decrease volume
@@ -147,10 +150,10 @@ bindsym $mod+F12 exec --no-startup-id light -A 2
 bindsym $mod+F11 exec --no-startup-id light -U 2
 
 # Touchpad controls
-bindsym $mod+space exec --no-startup-id ~/.config/i3/scripts/toggletouchpad
+bindsym $mod+space exec --no-startup-id $./scripts/toggletouchpad
 
 # Wifi control
-bindsym $mod+Insert exec --no-startup-id ~/.config/i3/scripts/togglewifi
+bindsym $mod+Insert exec --no-startup-id $./scripts/togglewifi
 
 # Media player controls
 bindsym $mod+F5 exec playerctl play-pause
@@ -168,8 +171,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # swapping caps lock with esc
 exec --no-startup-id setxkbmap -option "caps:swapescape"
 # setting the wallpaper
-exec --no-startup-id wal -i ~/Imagens/wallpapers/100218spark.jpeg
-# exec --no-startup-id feh --image-bg black --bg-max '~/Imagens/wallpapers/100218spark.jpeg'
+exec_always --no-startup-id wal -i $./wallpaper.jpg
+# exec --no-startup-id feh --image-bg black --bg-max '$./100218spark.jpeg'
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
