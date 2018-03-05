@@ -131,8 +131,8 @@ for_window [class="Spotify"] move to workspace $workspace9
 
 # Pulse Audio controls
 # move the open programs' audio to the defined sink
-bindsym $mod+Shift+s exec --no-startup-id ~/.config/i3/dependencies/movesinks 0
-bindsym $mod+Shift+f exec --no-startup-id ~/.config/i3/dependencies/movesinks 1
+bindsym $mod+Shift+s exec --no-startup-id ~/.config/i3/scripts/movesinks 0
+bindsym $mod+Shift+f exec --no-startup-id ~/.config/i3/scripts/movesinks 1
 # increase volume
 bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% 
 # decrease volume
@@ -147,10 +147,10 @@ bindsym $mod+F12 exec --no-startup-id light -A 2
 bindsym $mod+F11 exec --no-startup-id light -U 2
 
 # Touchpad controls
-bindsym $mod+space exec --no-startup-id ~/.config/i3/dependencies/toggletouchpad
+bindsym $mod+space exec --no-startup-id ~/.config/i3/scripts/toggletouchpad
 
 # Wifi control
-bindsym $mod+Insert exec --no-startup-id ~/.config/i3/dependencies/togglewifi
+bindsym $mod+Insert exec --no-startup-id ~/.config/i3/scripts/togglewifi
 
 # Media player controls
 bindsym $mod+F5 exec playerctl play-pause
