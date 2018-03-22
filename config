@@ -171,7 +171,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # swapping caps lock with esc
 exec --no-startup-id setxkbmap -option "caps:swapescape"
 # setting the wallpaper
-exec_always --no-startup-id wal -i $./wallpaper.jpg
+exec_always --no-startup-id wal -i $./wallpaper.*
 # exec --no-startup-id feh --image-bg black --bg-max '$./100218spark.jpeg'
 
 # resize window (you can also use the mouse for that)
