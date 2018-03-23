@@ -218,51 +218,56 @@ font pango:inconsolata 11
 		for_window [class="Spotify"] move to workspace $workspace9
 	#<
 #<
-#># defining here to use in relative paths
-	set $. ~/.config/i3
-#<
-#># Pulse Audio controls
-	#># move the open programs' audio to the defined sink
-		bindsym $mod+Shift+s exec --no-startup-id $./scripts/movesinks 0
-		bindsym $mod+Shift+f exec --no-startup-id $./scripts/movesinks 1
+#> main system controls
+	#># variables
+		set $. ~/.config/i3
 	#<
-	#># increase volume
-		bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% 
+	#># Pulse Audio controls
+		#># move the open programs' audio to the defined sink
+			bindsym $mod+Shift+s exec --no-startup-id $./scripts/movesinks 0
+			bindsym $mod+Shift+f exec --no-startup-id $./scripts/movesinks 1
+		#<
+		#># increase volume
+			bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% 
+		#<
+		#># decrease volume
+			bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% 
+		#<
+		#># mute sound
+			bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+		#<
 	#<
-	#># decrease volume
-		bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% 
+	#># screen brightness controls
+		#># increase
+			bindsym $mod+F12 exec --no-startup-id light -A 2
+		#<
+		#># decrease
+			bindsym $mod+F11 exec --no-startup-id light -U 2
+		#<
 	#<
-	#># mute sound
-		bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+	#># touchpad controls
+		bindsym $mod+space exec --no-startup-id $./scripts/toggletouchpad
 	#<
-#<
-#># Screen brightness controls
-	#># increase
-		bindsym $mod+F12 exec --no-startup-id light -A 2
+	#># wifi control
+		bindsym $mod+Insert exec --no-startup-id $./scripts/togglewifi
 	#<
-	#># decrease
-		bindsym $mod+F11 exec --no-startup-id light -U 2
+	#># media player controls
+		bindsym $mod+F5 exec playerctl play-pause
+		bindsym $mod+F4 exec playerctl previous
+		bindsym $mod+F6 exec playerctl next
 	#<
-#<
-#># Touchpad controls
-	bindsym $mod+space exec --no-startup-id $./scripts/toggletouchpad
-#<
-#># Wifi control
-	bindsym $mod+Insert exec --no-startup-id $./scripts/togglewifi
-#<
-#># Media player controls
-	bindsym $mod+F5 exec playerctl play-pause
-	bindsym $mod+F4 exec playerctl previous
-	bindsym $mod+F6 exec playerctl next
 #<
 #># gaps
+#> variables
 	set $innergap 8
 	set $outergap 64
 	set $innergap_crement 4
 	set $outergap_crement 32
-
+#<
+#> default gap sizes
 	gaps inner $innergap
 	gaps outer $outergap
+#<
 	#># no border when there are no gaps
 		smart_borders no_gaps
 	#<
