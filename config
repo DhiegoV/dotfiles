@@ -120,7 +120,7 @@ font pango:inconsolata 11
 	bindsym $mod+f mode $focusmode
 	mode $focusmode {
 		#># change focus between tiling / floating windows
-			bindsym t focus mode_toggle $and_exit_mode
+			bindsym f focus mode_toggle $and_exit_mode
 		#<
 		#># focus the parent container
 			bindsym p focus parent $and_exit_mode
@@ -258,16 +258,16 @@ font pango:inconsolata 11
 	#<
 #<
 #># gaps
-#> variables
-	set $innergap 8
-	set $outergap 64
-	set $innergap_crement 4
-	set $outergap_crement 32
-#<
-#> default gap sizes
-	gaps inner $innergap
-	gaps outer $outergap
-#<
+	#> variables
+		set $innergap 8
+		set $outergap 64
+		set $innergap_crement 4
+		set $outergap_crement 32
+	#<
+	#> default gap sizes
+		gaps inner $innergap
+		gaps outer $outergap
+	#<
 	#># no border when there are no gaps
 		smart_borders no_gaps
 	#<
