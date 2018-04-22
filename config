@@ -81,8 +81,8 @@
 	# mode variable
 	set $and_exit_mode , mode default
 	
-	# window stuff 
-		set $winmode "window stuff"
+	# window controls
+		set $winmode "window controls"
 		bindsym $mod+w mode $winmode
 		mode $winmode {
 			# split
