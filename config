@@ -91,6 +91,10 @@
 				# vertically
 					bindsym v split v $and_exit_mode
 
+			# showing/hiding the title
+				bindsym t border normal $and_exit_mode
+				bindsym Shift+t border pixel 2 $and_exit_mode
+
 			# enter fullscreen mode for the focused container
 				bindsym Shift+f fullscreen toggle $and_exit_mode
 
@@ -259,9 +263,6 @@
 # borders
 	# for new windows
 		new_window pixel 2
-	# showing/hiding the title
-		bindsym $mod+t border normal
-		bindsym $mod+Shift+t border pixel 2
 
 # colors
 	set $border #6702db
