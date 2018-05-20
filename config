@@ -39,6 +39,9 @@
 	# setting the wallpaper
 		exec_always --no-startup-id wal -i $./wallpaper.*
 		# exec --no-startup-id feh --image-bg black --bg-max '$./100218spark.jpeg'
+	# redshift
+		exec_always --no-startup-id redshift -l -5.9499:-35.9260
+
 # terminal config
 	set $defaultTerminal urxvt
 	set $runInDefaultTerminal urxvt -e
