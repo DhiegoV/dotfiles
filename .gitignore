@@ -1,1 +1,9 @@
-wallpaper.*
+
+# ignoring wallpaper files
+*.jpg
+*.jpeg
+*.png
+
+# ignoring colorscheme file
+*.json
+
