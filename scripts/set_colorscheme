@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# Sets the wal colorscheme described by the .json at the given directory.
+#
+# Usage:
+# set_colorscheme <directory>
+
+dir=$1
+
+# takes all *.json on the given dir (it should be only one .json in there)
+filename=$(ls -1 $dir | grep -E -e '.*\.json')
+echo colorscheme file: ${dir}/${filename}
+
+wal -f ${dir}/${filename}
+

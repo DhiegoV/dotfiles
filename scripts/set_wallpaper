@@ -1,0 +1,16 @@
+#!/bin/sh
+# 
+# Sets the wallpaper greping the image on the given directory.
+#
+# Usage:
+# set_wallpaper <directory>
+
+dir=$1
+
+# filters an image (a file ending in .png, .jpg or .jpeg) from the contents of
+# the given dir.
+filename=$(ls -1 $dir | grep -E -e '.*\.(jpeg|jpg|png)')
+echo wallpaper file: ${dir}/${filename}
+
+feh --bg-fill ${dir}/${filename}
+

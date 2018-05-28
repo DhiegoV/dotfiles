@@ -38,8 +38,9 @@
 	# swapping caps lock with esc
 		exec --no-startup-id setxkbmap -option "caps:swapescape"
 	# setting the wallpaper
-		exec_always --no-startup-id wal -i $./wallpaper.*
-		# exec --no-startup-id feh --image-bg black --bg-max '$./100218spark.jpeg'
+		exec_always --no-startup-id $./scripts/set_wallpaper $.
+	# setting the colorscheme
+		exec_always --no-startup-id $./scripts/set_colorscheme $.
 	# redshift
 		exec --no-startup-id redshift -l -5.9499:-35.9260
 
