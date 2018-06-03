@@ -14,6 +14,10 @@
 	set $mod Mod4
 	set $. ~/.config/i3
 
+	# default terminal emulator
+	set $defaultTerminal urxvt
+	set $runInDefaultTerminal urxvt -e
+
 # font config 
 	# Font for window titles. Will also be used by the bar unless a different font
 	# is used in the bar {} block below.
@@ -44,12 +48,6 @@
 	# redshift
 		exec --no-startup-id redshift -l -5.9499:-35.9260
 
-# terminal config
-	set $defaultTerminal urxvt
-	set $runInDefaultTerminal urxvt -e
-	# start the default terminal
-		bindsym $mod+Return exec $defaultTerminal
-
 # launching programs
 	# start dmenu (a program launcher)
 	# bindsym $mod+d exec dmenu_run
@@ -59,6 +57,9 @@
 	# shipping a .desktop file. It is a wrapper around dmenu, so you need that
 	# installed.
 	bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -i -p ""'
+
+	# launch the default terminal emulator
+	bindsym $mod+Return exec $defaultTerminal
 
 # change focus
 	bindsym $mod+h focus left
