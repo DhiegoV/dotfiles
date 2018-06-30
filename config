@@ -135,21 +135,20 @@
 			bindsym Escape mode "default"
 		}
 	# focus 
-		set $focusmode "focus"
 		bindsym $mod+f mode $focusmode
+		set $focusmode "(t)oggle floating/tiling (p)arent (c)hild"
 		mode $focusmode {
-			# change focus between tiling / floating windows
-				bindsym f focus mode_toggle $and_exit_mode
-			
-			# focus the parent container
-				bindsym p focus parent $and_exit_mode
-			
-			# focus the child container
-				bindsym c focus child $and_exit_mode
+			# focus on
+			## tilling/floating windows
+			bindsym t focus mode_toggle $and_exit_mode
+			## parent container
+			bindsym p focus parent      $and_exit_mode
+			## child container
+			bindsym c focus child       $and_exit_mode
 						
 			# back to default mode
-				bindsym Escape mode "default"
-			}
+			bindsym Escape mode "default"
+		}
 	# i3-related commands 
 		set $i3mode "i3-related commands"
 		bindsym $mod+i mode $i3mode
