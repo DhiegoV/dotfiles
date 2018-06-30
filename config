@@ -195,15 +195,17 @@
 			bindsym Escape mode "default"
 		}
 	# open window
-		bindsym $mod+x mode "open window"
-		mode "open window" {
+		bindsym $mod+x mode $openwindowmode
+		set $openwindowmode "(r)anger (s)potify (f)irefox (q)utebrowser"
+		mode $openwindowmode {
 			bindsym r exec $runInDefaultTerminal ranger $and_exit_mode
-			bindsym s exec spotify $and_exit_mode
-			bindsym f exec firefox $and_exit_mode
-			bindsym q exec qutebrowser , mode "default" $and_exit_mode
+			bindsym s exec spotify                      $and_exit_mode
+			bindsym f exec firefox                      $and_exit_mode
+			bindsym q exec qutebrowser                  $and_exit_mode
+
 			# back to normal: Escape
-				bindsym Escape mode "default"
-			}
+			bindsym Escape mode "default"
+		}
 
 # workspaces
 	set $workspace8 "8: firefox"
