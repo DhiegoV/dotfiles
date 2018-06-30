@@ -150,21 +150,21 @@
 			bindsym Escape mode "default"
 		}
 	# i3-related commands 
-		set $i3mode "i3-related commands"
 		bindsym $mod+i mode $i3mode
+		set $i3mode "re(l)oad config, re(s)tart or (e)xit"
 		mode $i3mode {
 			# reload the configuration file
-				bindsym l reload $and_exit_mode
+			bindsym l reload  $and_exit_mode
 			
-			# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-				bindsym s restart $and_exit_mode
+			# restart i3 inplace
+			bindsym s restart $and_exit_mode
 			
 			# exit i3 (logs you out of your X session)
-				bindsym e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'" $and_exit_mode
+			bindsym e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'" $and_exit_mode
 			
 			# back to default mode
-				bindsym Escape mode "default"
-			}
+			bindsym Escape mode "default"
+		}
 	# resize
 		bindsym $mod+r mode "resize"
 		mode "resize" {
