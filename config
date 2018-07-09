@@ -309,8 +309,8 @@
 		# hidden normally, shows when modifier (below) is pressed
 		mode hide
 
-		# modifier (Mod5 = Alt Gr)
-		modifier Mod5
+		# modifier
+		modifier $mod
 
 		position top
 		status_command i3status
