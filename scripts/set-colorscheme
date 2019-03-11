@@ -3,7 +3,7 @@
 # Sets the wal colorscheme described by the .json at the given directory.
 #
 # Usage:
-# set_colorscheme <directory>
+# set-colorscheme <directory>
 
 dir=$1
 

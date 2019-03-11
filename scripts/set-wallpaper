@@ -3,7 +3,7 @@
 # Sets the wallpaper greping the image on the given directory.
 #
 # Usage:
-# set_wallpaper <directory>
+# set-wallpaper <directory>
 
 dir=$1
 
