@@ -17,6 +17,8 @@ set $. ~/.config/i3
 # default terminal emulator
 set $defaultTerminal st
 set $runInDefaultTerminal st -e
+# TODO: I would be better to have the default terminal be
+# gathered by the $TERMINAL environment variable
 
 # font config 
 
