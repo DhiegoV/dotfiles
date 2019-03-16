@@ -15,8 +15,8 @@ set $mod Mod4
 set $. ~/.config/i3
 
 # default terminal emulator
-set $defaultTerminal urxvt
-set $runInDefaultTerminal urxvt -e
+set $defaultTerminal st
+set $runInDefaultTerminal st -e
 
 # font config 
 
