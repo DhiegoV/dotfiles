@@ -294,41 +294,6 @@ bindsym $mod+F5 exec playerctl play-pause
 bindsym $mod+F4 exec playerctl previous
 bindsym $mod+F6 exec playerctl next
 
-# gaps
-
-set $innergap 8
-set $outergap 64
-set $innergap_crement 4
-set $outergap_crement 32
-
-# default gap sizes
-gaps inner $innergap
-gaps outer $outergap
-
-# no border when there are no gaps
-smart_borders no_gaps
-
-## controls
-
-# reseting
-bindsym $mod+Control+minus gaps inner current set 0 , gaps outer current set 0
-bindsym $mod+Control+equal gaps inner current set $innergap , gaps outer current set $outergap
-
-# inner
-bindsym $mod+equal gaps inner current plus $innergap_crement
-bindsym $mod+minus gaps inner current minus $innergap_crement
-
-# outer
-bindsym $mod+Shift+equal gaps outer current plus $outergap_crement
-bindsym $mod+Shift+minus gaps outer current minus $outergap_crement
-
-## workspace-specific gaps
-
-workspace $workspace9 gaps outer 0
-workspace $workspace9 gaps inner 0
-workspace $workspace10 gaps inner 0
-workspace $workspace10 gaps outer 0
-
 # borders
 
 # for new windows
