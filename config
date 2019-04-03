@@ -300,14 +300,14 @@ bindsym $mod+F6 exec playerctl next
 new_window pixel 4
 
 # colors
+#  taken from gruvbox theme (https://github.com/morhetz/gruvbox)
 
-set $border #6702db
-set $indicador #1204db
-set $text #eeeeee
-set $inactive #262626
+set $border #458588
+set $text #fbf1c7
+set $inactive #504945
 
 # class          border	   backgr.   text  indicator  child_border
-client.focused   $border   $border   $text $indicador $border
+client.focused   $border   $border   $text $border    $border
 client.unfocused $inactive $inactive $text $inactive  $inactive
 
 # i3bar
