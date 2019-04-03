@@ -139,7 +139,7 @@ set $and_exit_mode , mode default
     set $titlemode "(s)how (h)ide"
     mode $titlemode {
         bindsym s border normal  $and_exit_mode
-        bindsym h border pixel 2 $and_exit_mode
+        bindsym h border pixel 4 $and_exit_mode
         bindsym Escape mode "default"
     }
 ## focus 
@@ -297,7 +297,7 @@ bindsym $mod+F6 exec playerctl next
 # borders
 
 # for new windows
-new_window pixel 2
+new_window pixel 4
 
 # colors
 
