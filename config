@@ -96,52 +96,54 @@ bindsym $mod+Shift+Right move right
 set $and_exit_mode , mode default
 
 ## window controls
-    bindsym $mod+w mode $winmode
-    set $winmode "(s)plit (t)itle (l)ayout fl(o)at (f)ullscreen (k)ill"
-    mode $winmode {
-        # submodes
-        ## split
-        bindsym s mode $splitmode
-        ## title
-        bindsym t mode $titlemode
-        ## layout
-        bindsym l mode $layoutmode
 
-        # window toggles
-        ## fullscreen
-        bindsym f fullscreen toggle $and_exit_mode
-        ## floating
-        bindsym o floating   toggle $and_exit_mode
+bindsym $mod+w mode $winmode
+set $winmode "(s)plit (t)itle (l)ayout fl(o)at (f)ullscreen (k)ill"
+mode $winmode {
+	# submodes
+	## split
+	bindsym s mode $splitmode
+	## title
+	bindsym t mode $titlemode
+	## layout
+	bindsym l mode $layoutmode
 
-        # kill focused window
-        bindsym k kill $and_exit_mode
+	# window toggles
+	## fullscreen
+	bindsym f fullscreen toggle $and_exit_mode
+	## floating
+	bindsym o floating   toggle $and_exit_mode
 
-        # back to default mode
-        bindsym Escape mode "default"
-    }
+	# kill focused window
+	bindsym k kill $and_exit_mode
 
-    set $layoutmode "(s)tacking (t)abbed (v)ertical/(h)orizontal split"
-    mode $layoutmode {
-        bindsym s layout stacking $and_exit_mode
-        bindsym t layout tabbed   $and_exit_mode
-        bindsym v layout splitv   $and_exit_mode
-        bindsym h layout splith   $and_exit_mode
-        bindsym Escape mode "default"
-    }
+	# back to default mode
+	bindsym Escape mode "default"
+}
 
-    set $splitmode "(h)orizontal (v)ertical"
-    mode $splitmode {
-        bindsym v split vertical   $and_exit_mode
-        bindsym h split horizontal $and_exit_mode
-        bindsym Escape mode "default"
-    }
+set $layoutmode "(s)tacking (t)abbed (v)ertical/(h)orizontal split"
+mode $layoutmode {
+	bindsym s layout stacking $and_exit_mode
+	bindsym t layout tabbed   $and_exit_mode
+	bindsym v layout splitv   $and_exit_mode
+	bindsym h layout splith   $and_exit_mode
+	bindsym Escape mode "default"
+}
 
-    set $titlemode "(s)how (h)ide"
-    mode $titlemode {
-        bindsym s border normal  $and_exit_mode
-        bindsym h border pixel 4 $and_exit_mode
-        bindsym Escape mode "default"
-    }
+set $splitmode "(h)orizontal (v)ertical"
+mode $splitmode {
+	bindsym v split vertical   $and_exit_mode
+	bindsym h split horizontal $and_exit_mode
+	bindsym Escape mode "default"
+}
+
+set $titlemode "(s)how (h)ide"
+mode $titlemode {
+	bindsym s border normal  $and_exit_mode
+	bindsym h border pixel 4 $and_exit_mode
+	bindsym Escape mode "default"
+}
+
 ## focus 
 
 bindsym $mod+f mode $focusmode
