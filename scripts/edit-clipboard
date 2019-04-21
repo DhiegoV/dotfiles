@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# Open the text from the clipboard in $EDITOR and put the resulting
+# edited text back on the clipboard
+
+tmp_file='/tmp/edit-clipboard-text'
+
+xsel -o -b > $tmp_file 
+$EDITOR $tmp_file
+cat $tmp_file | xsel -i -b
+

@@ -67,6 +67,9 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -i -p 
 # launch the default terminal emulator
 bindsym $mod+Return exec $defaultTerminal
 
+# edit the clipboard
+bindsym $mod+e exec --no-startup-id $runInDefaultTerminal $./scripts/edit-clipboard
+
 # change focus
 
 bindsym $mod+h focus left
