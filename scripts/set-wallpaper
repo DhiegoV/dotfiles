@@ -12,5 +12,9 @@ dir=$1
 filename=$(ls -1 $dir | grep -E -e '.*\.(jpeg|jpg|png)')
 echo wallpaper file: ${dir}/${filename}
 
-feh --bg-fill ${dir}/${filename}
+# --bg-center centers the image and
+#  if too small, uses black borders around
+#  if too big, the image is cut and only the very center is seen
+#  the aspect ratio is kept
+feh --bg-center ${dir}/${filename}
 
